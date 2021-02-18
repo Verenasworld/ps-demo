@@ -3,5 +3,6 @@ export interface UserSettings {
     emailOffers: boolean,
     interfaceStyle: string,
     subscriptionType: string,
+    testing: string,
    
 }

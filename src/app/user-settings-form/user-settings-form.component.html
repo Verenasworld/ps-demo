@@ -1,6 +1,6 @@
 <div class="container">
     <h2>User Settings</h2>
-    <form #form = "ngForm">
+    <form #form = "ngForm" ngNativeValidate>
         <div class="form-group">
             <label for="name">Name</label>
             <input id="name" name="name"class="form-control" placeholder="Name" [(ngModel)] = "userSettings.name">
@@ -56,7 +56,7 @@
             <label for="testing">testing </label>
             <input type="date" id="testing" name="testing" class="form-control">
             <label for="testing">Colorpicker </label>
-            <input type="color" id="testing" name="testing" class="form-control form-control-color">
+            <input type="color" id="testing" name="testing" class="form-control form-control-color" [(ngModel)] = "userSettings.testing">
         </div>
         <button class="btn btn-primary">Send</button>
     </form>
