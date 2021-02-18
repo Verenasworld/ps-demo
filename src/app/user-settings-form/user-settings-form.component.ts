@@ -11,9 +11,9 @@ export class UserSettingsFormComponent implements OnInit {
   public userSettings : UserSettings = {
     name: 'vreni',
     emailOffers: true,
-    interfaceStyle: 'medium',
+    interfaceStyle: 'dark',
     subscriptionType: 'Weekly',
-    
+   
   };
 
   constructor() {}
