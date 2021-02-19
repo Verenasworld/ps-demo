@@ -2,6 +2,6 @@
     margin:10px 0 10px 0;
 }
 
-.ng-invalid:not(form).ng-touched{
+.field-error{
     border: 1px solid red;
 }

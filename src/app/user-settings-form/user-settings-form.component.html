@@ -3,7 +3,7 @@
     <p>Playing with  Angular Forms 
 
       Databinding | Form Validation | Http | Form Controls | </p>
-    <form #form = "ngForm" ngNativeValidate>
+    <form #form = "ngForm" (ngSubmit)="onSubmit(form)">
         <div class="form-group">
             <label for="name">Name</label>
             <input 
@@ -14,8 +14,9 @@
             [(ngModel)] = "userSettings.name" 
             required
             #nameField="ngModel"
+            [class.field-error]="form.submitted && nameField.invalid"
             >
-            <div [hidden] = "nameField.valid || nameField.untouched"
+            <div [hidden] = "!form.submitted || nameField.valid"
               class= "alert alert-danger">Enter a name
             </div>
         </div>
