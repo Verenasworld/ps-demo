@@ -1,9 +1,23 @@
 <div class="container">
-    <h2>User Settings</h2>
+    <h2>User Settings  </h2>
+    <p>Playing with  Angular Forms 
+
+      Databinding | Form Validation | Http | Form Controls | </p>
     <form #form = "ngForm" ngNativeValidate>
         <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" name="name"class="form-control" placeholder="Name" [(ngModel)] = "userSettings.name">
+            <input 
+            id="name" 
+            name="name"
+            class="form-control" 
+            placeholder="Name" 
+            [(ngModel)] = "userSettings.name" 
+            required
+            #nameField="ngModel"
+            >
+            <div [hidden] = "nameField.valid || nameField.untouched"
+              class= "alert alert-danger">Enter a name
+            </div>
         </div>
         <div class="form-check form-group">
             <input class="form-check-input" type="checkbox" name="emailOffers" id="emailOffers" [(ngModel)] = "userSettings.subscriptionType">
