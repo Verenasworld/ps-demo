@@ -18,7 +18,7 @@ export class UserSettingsFormComponent implements OnInit {
     testing:'#ff0000'
    };
 
-  userSettings : UserSettings = {...this.originalUserSettings}
+  userSettings: UserSettings = {...this.originalUserSettings};
 
   constructor() {}
 
@@ -26,11 +26,11 @@ export class UserSettingsFormComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log(`in onSubmit:`, form.valid)
+    console.log(`in onSubmit:`, form.valid);
   }
 
   onBlur(field: NgModel){
-    console.log(`in onBlur`, field.valid)
+    console.log(`in onBlur`, field.valid);
 
   }
 }

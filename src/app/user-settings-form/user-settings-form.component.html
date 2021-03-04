@@ -1,17 +1,17 @@
 <div class="container">
     <h2>User Settings  </h2>
-    <p>Playing with  Angular Forms 
+    <p>Playing with  Angular Forms
 
       Databinding | Form Validation | Http | Form Controls | </p>
     <form #form = "ngForm" (ngSubmit)="onSubmit(form)">
         <div class="form-group">
             <label for="name">Name</label>
-            <input 
-            id="name" 
+            <input
+            id="name"
             name="name"
-            class="form-control" 
-            placeholder="Name" 
-            [(ngModel)] = "userSettings.name" 
+            class="form-control"
+            placeholder="Name"
+            [(ngModel)] = "userSettings.name"
             required
             #nameField="ngModel"
             (blur)="onBlur(nameField)"
@@ -77,4 +77,3 @@
         <button class="btn btn-primary">Send</button>
     </form>
 </div>
- {{userSettings | json}}
